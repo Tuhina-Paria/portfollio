@@ -71,7 +71,7 @@ export default function Hero() {
             View Work
           </a>
 
-          <a
+          {/* <a
             href="https://wa.me/919434024513"
             target="_blank"
             className="
@@ -86,7 +86,7 @@ export default function Hero() {
             "
           >
             Get Website
-          </a>
+          </a> */}
 
         </div>
 
