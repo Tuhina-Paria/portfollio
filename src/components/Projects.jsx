@@ -1,122 +1,315 @@
 import { motion } from "framer-motion";
+import {
+  ExternalLink,
+  Github,
+  ArrowUpRight,
+} from "lucide-react";
 
 const projects = [
   {
-    title: "Restaurant Website",
-    desc: "Modern website designed to showcase menu and increase customer orders.",
-    result: "Helps attract more customers online",
-    image: "/projects/spice.png",
-    live: "https://spice-n-ice-restaurant.vercel.app",
-  },
-  {
-    title: "AI Image Platform",
-    desc: "Full-stack app with login system and usage control.",
-    result: "Secure & scalable user experience",
+    title: "VisionCraft AI",
+    subtitle: "AI Text-to-Image Generation Platform",
+    description:
+      "A full-stack AI application where users generate images from text prompts with secure authentication, smooth animations, and cloud-based image storage.",
+
     image: "/projects/visioncraft.png",
+
+    technologies: [
+      "React",
+      "JavaScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Node.js",
+      "Express",
+      "MongoDB",
+      "JWT",
+      "REST API",
+      "Cloudinary",
+    ],
+
     live: "https://vision-craft-ai-gamma.vercel.app",
+    github: "https://github.com/Tuhina-Paria/VisionCraft-AI",
   },
+
   {
-    title: "E-Commerce Platform",
-    desc: "Complete online store with cart, orders and admin dashboard.",
-    result: "End-to-end business solution",
+    title: "Greenly",
+    subtitle: "Modern Grocery E-Commerce",
+
+    description:
+      "A responsive e-commerce platform featuring authentication, shopping cart, order management, and admin functionality with a modern user experience.",
+
     image: "/projects/greenly.png",
+
+    technologies: [
+      "React",
+      "Tailwind CSS",
+      "Node.js",
+      "MongoDB",
+      "JWT",
+      "REST API",
+    ],
+
     live: "https://greenly-fronted.vercel.app",
+    github: "https://github.com/Tuhina-Paria/Greenly",
   },
+
+  // {
+  //   title: "Spice & Ice",
+
+  //   subtitle: "Restaurant Business Website",
+
+  //   description:
+  //     "A modern marketing website focused on responsive design, engaging user experience, and helping local businesses establish a strong online presence.",
+
+  //   image: "/projects/spice.png",
+
+  //   technologies: [
+  //     "React",
+  //     "Tailwind CSS",
+  //     "Responsive Design",
+  //     "Framer Motion",
+  //   ],
+
+  //   live: "https://spice-n-ice-restaurant.vercel.app",
+  //   github: "YOUR_GITHUB_LINK",
+  // },
 ];
 
 export default function Projects() {
   return (
-    <section id="projects" className="py-20 bg-black text-white">
+    <section
+      id="projects"
+      className="bg-[#fafafa] py-28"
+    >
+      <div className="mx-auto max-w-7xl px-6 lg:px-16">
 
-      <div className="max-w-5xl mx-auto px-5">
+        {/* Heading */}
 
-        {/* HEADING */}
-        <h2 className="text-2xl sm:text-3xl font-semibold mb-3">
-          My Work
-        </h2>
+        <motion.div
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+          }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+          className="max-w-3xl"
+        >
+          <p className="text-sm font-semibold uppercase tracking-[6px] text-red-600">
+            Selected Projects
+          </p>
 
-        <p className="text-white/50 text-sm mb-10">
-          Real projects built to solve real business problems
-        </p>
+          <h2 className="mt-5 text-5xl font-black leading-tight text-gray-900 lg:text-6xl">
+            Products I've
+            <br />
+            built and shipped.
+          </h2>
 
-        {/* PROJECT LIST */}
-        <div className="flex flex-col gap-8">
+          <p className="mt-8 text-lg leading-9 text-gray-600">
+            A collection of projects showcasing my frontend
+            engineering skills, component architecture,
+            responsive design, animations, API integration,
+            and full-stack development.
+          </p>
 
-          {projects.map((p, i) => (
-            <motion.div
-              key={i}
-              initial={{ opacity: 0, y: 25 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ delay: i * 0.1 }}
-              className="
-                group
-                border border-white/10 
-                rounded-2xl 
-                overflow-hidden
-                hover:border-white/30
-                transition
-              "
-            >
+        </motion.div>
 
-              {/* IMAGE */}
-              <div className="relative overflow-hidden">
+        {/* Projects */}
 
-                <img
-                  src={p.image}
-                  alt={p.title}
-                  loading="lazy"
-                  className="
-                    w-full 
-                    aspect-[16/10] 
-                    object-cover
-                    transition duration-500
-                    group-hover:scale-105
-                  "
-                />
+        <div className="mt-20 space-y-20">
+          {projects.map((project, index) => (
+  <motion.div
+    key={project.title}
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.7 }}
+    className={`
+      grid
+      items-center
+      gap-14
+      lg:grid-cols-2
+      ${
+        index % 2 !== 0
+          ? "lg:[&>*:first-child]:order-2"
+          : ""
+      }
+    `}
+  >
 
-                {/* subtle overlay for premium feel */}
-                <div className="absolute inset-0 bg-black/10" />
+    {/* ================= IMAGE ================= */}
 
-              </div>
+    <motion.div
+      whileHover={{
+        y: -8,
+        scale: 1.02,
+      }}
+      transition={{
+        duration: 0.3,
+      }}
+      className="
+        overflow-hidden
+        rounded-3xl
+        border
+        border-gray-200
+        bg-white
+        shadow-xl
+      "
+    >
+      <img
+        src={project.image}
+        alt={project.title}
+        className="
+          w-full
+          object-cover
+          transition
+          duration-700
+          hover:scale-105
+        "
+      />
+    </motion.div>
 
-              {/* CONTENT */}
-              <div className="p-5">
+    {/* ================= CONTENT ================= */}
 
-                <h3 className="text-lg font-medium">
-                  {p.title}
-                </h3>
+    <div>
 
-                <p className="text-white/60 text-sm mt-2">
-                  {p.desc}
-                </p>
+      <p className="text-sm font-semibold uppercase tracking-[5px] text-red-600">
+        Featured Project
+      </p>
 
-                {/* RESULT */}
-                <p className="text-white/40 text-xs mt-2">
-                  👉 {p.result}
-                </p>
+      <h3 className="mt-4 text-4xl font-black text-gray-900">
+        {project.title}
+      </h3>
 
-                {/* CTA */}
-                <a
-                  href={p.live}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="
-                    inline-block mt-4 
-                    text-sm 
-                    px-4 py-2 
-                    border border-white/20 
-                    rounded-full
-                    hover:bg-white hover:text-black
-                    transition
-                  "
-                >
-                  View Live
-                </a>
+      <p className="mt-2 text-xl text-gray-500">
+        {project.subtitle}
+      </p>
 
-              </div>
+      <p className="mt-8 leading-8 text-gray-600">
+        {project.description}
+      </p>
 
-            </motion.div>
-          ))}
+      {/* Tech Stack */}
+
+      <div className="mt-8 flex flex-wrap gap-3">
+
+        {project.technologies.map((tech) => (
+          <span
+            key={tech}
+            className="
+              rounded-full
+              border
+              border-red-100
+              bg-red-50
+              px-4
+              py-2
+              text-sm
+              font-medium
+              text-red-700
+            "
+          >
+            {tech}
+          </span>
+        ))}
+
+      </div>
+            {/* ================= Buttons ================= */}
+
+      <div className="mt-10 flex flex-wrap gap-5">
+
+        {/* Live Demo */}
+
+        <motion.a
+          whileHover={{
+            y: -4,
+            scale: 1.04,
+          }}
+          whileTap={{
+            scale: 0.97,
+          }}
+          href={project.live}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            inline-flex
+            items-center
+            gap-3
+            rounded-full
+            bg-red-600
+            px-7
+            py-4
+            font-semibold
+            text-white
+            shadow-lg
+            transition
+            hover:bg-red-700
+          "
+        >
+          Live Demo
+
+          <ExternalLink size={18} />
+        </motion.a>
+
+        {/* GitHub */}
+
+        <motion.a
+          whileHover={{
+            y: -4,
+            scale: 1.04,
+          }}
+          whileTap={{
+            scale: 0.97,
+          }}
+          href={project.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="
+            inline-flex
+            items-center
+            gap-3
+            rounded-full
+            border
+            border-gray-300
+            bg-white
+            px-7
+            py-4
+            font-semibold
+            text-gray-800
+            transition
+            hover:border-red-600
+            hover:text-red-600
+          "
+        >
+          GitHub
+
+          <Github size={18} />
+        </motion.a>
+
+        {/* Read Case Study
+
+        <motion.button
+          whileHover={{
+            x: 5,
+          }}
+          className="
+            inline-flex
+            items-center
+            gap-2
+            font-semibold
+            text-red-600
+          "
+        >
+          Read Case Study
+
+          <ArrowUpRight size={18} />
+        </motion.button> */}
+
+      </div>
+
+    </div>
+
+  </motion.div>
+))}
 
         </div>
 
@@ -124,3 +317,5 @@ export default function Projects() {
     </section>
   );
 }
+        
+        

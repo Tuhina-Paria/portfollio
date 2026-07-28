@@ -6,7 +6,7 @@ const links = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
   { name: "Projects", id: "projects" },
-  { name: "Contact", id: "contact" },
+  // { name: "Contact", id: "contact" },
 ];
 
 export default function Navbar() {
