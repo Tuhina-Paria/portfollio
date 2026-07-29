@@ -121,7 +121,7 @@ const Hero = () => {
     lg:pb-20
   "
 >
-  {/* Small Heading */}
+  {/* Small Heading
 
   <p
     className="
@@ -134,7 +134,7 @@ const Hero = () => {
     "
   >
    React • JavaScript • UI Engineering
-  </p>
+  </p> */}
 
   {/* Main Heading */}
 
