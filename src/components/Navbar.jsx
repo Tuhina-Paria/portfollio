@@ -6,7 +6,7 @@ const links = [
   { name: "Home", id: "home" },
   { name: "About", id: "about" },
   { name: "Projects", id: "projects" },
-  // { name: "Contact", id: "contact" },
+  { name: "Contact", id: "contact" },
 ];
 
 export default function Navbar() {
@@ -82,12 +82,28 @@ export default function Navbar() {
         </div>
 
         {/* CTA */}
-        <button
-          onClick={() => handleScrollTo("contact", "Contact")}
-          className="hidden md:block px-5 py-2 text-sm rounded-full border border-white/20 hover:border-white transition"
-        >
-          Contact
-        </button>
+      <button
+  onClick={() => handleScrollTo("contact", "Contact")}
+  className="
+    hidden
+    md:flex
+    items-center
+    gap-2
+    px-6
+    py-3
+    rounded-full
+    bg-white
+    text-[#A30000]
+    font-semibold
+    transition-all
+    duration-300
+    hover:scale-105
+    hover:shadow-[0_10px_30px_rgba(255,255,255,0.25)]
+    active:scale-95
+  "
+>
+ Let's Talk
+</button>
 
         {/* MOBILE ICON */}
         <button
