@@ -92,7 +92,7 @@ className="max-w-3xl"
 Skills
 </p>
 
-<h2 className="mt-5 text-5xl lg:text-6xl font-black text-white">
+<h2 className="mt-5 text-3xl lg:text-5xl font-black text-white">
 Technologies I
 <br/>
 work with.
