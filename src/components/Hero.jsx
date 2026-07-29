@@ -445,7 +445,7 @@ rel="noopener noreferrer"
 
 {/* ================= SCROLL INDICATOR ================= */}
 
-<motion.div
+{/* <motion.div
   animate={{
     y: [0, 10, 0],
   }}
@@ -473,7 +473,7 @@ rel="noopener noreferrer"
       tracking-[6px]
     "
   >
-   Explore
+   
   </p>
 
   <div
@@ -507,7 +507,7 @@ rel="noopener noreferrer"
 
   </div>
 
-</motion.div>
+</motion.div> */}
 
 </div>
 </section>
