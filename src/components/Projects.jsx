@@ -99,7 +99,7 @@ export default function Projects() {
             Selected Projects
           </p>
 
-          <h2 className="mt-5 text-5xl font-black leading-tight text-gray-900 lg:text-6xl">
+          <h2 className="mt-5 text-3xl font-black leading-tight text-gray-900 lg:text-5xl">
             Products I've
             <br />
             built and shipped.
