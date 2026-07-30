@@ -28,7 +28,7 @@ const skills = [
     level: "Advanced",
   },
   {
-    name: "Next.js",
+    name: "Typescript",
     icon: <SiNextdotjs />,
     color: "text-white",
     level: "Learning",

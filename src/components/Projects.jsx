@@ -53,26 +53,30 @@ const projects = [
     github: "https://github.com/Tuhina-Paria/Greenly",
   },
 
-  // {
-  //   title: "Spice & Ice",
+ {
+  title: "Task Manager",
 
-  //   subtitle: "Restaurant Business Website",
+  subtitle: "Productivity Dashboard",
 
-  //   description:
-  //     "A modern marketing website focused on responsive design, engaging user experience, and helping local businesses establish a strong online presence.",
+  description:
+  
+  "A modern task management dashboard built with React, TypeScript, Zustand, and Tailwind CSS. Designed with a scalable architecture, it features Kanban workflows, virtualized task lists, real-time search, priority filtering, and responsive design. The project is actively maintained with upcoming features including authentication, analytics, notifications, backend integration, accessibility improvements, and real-time collaboration.",
 
-  //   image: "/projects/spice.png",
+  image: "/projects/taskmanager.png",
 
-  //   technologies: [
-  //     "React",
-  //     "Tailwind CSS",
-  //     "Responsive Design",
-  //     "Framer Motion",
-  //   ],
+  technologies: [
+    "React",
+    "TypeScript",
+    "Zustand",
+    "Tailwind CSS",
+    "Vite",
+    "Framer Motion",
+  ],
 
-  //   live: "https://spice-n-ice-restaurant.vercel.app",
-  //   github: "YOUR_GITHUB_LINK",
-  // },
+  live: "task-manager-dashbord.vercel.app",
+
+  github: "https://github.com/Tuhina-Paria/project-tracker",
+}
 ];
 
 export default function Projects() {
