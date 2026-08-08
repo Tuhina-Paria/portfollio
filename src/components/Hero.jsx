@@ -30,15 +30,15 @@ const Hero = () => {
         select-none
         font-black
         uppercase
-        tracking-[4px]
-        text-[180px]
-        lg:text-[260px]
+        tracking-[2px]
+        text-[100px]
+        lg:text-[180px]
         text-white/[0.06]
         z-0
         opacity-3%
       "
       >
-        Fronted
+        Fullstack
       </h1>
 
       {/* Social Icons */}
